@@ -76,9 +76,9 @@ const sessionOptions ={
     }
 } 
 //📌 Defining route
-// app.get("/",(req,res)=>{
-//     res.send("Welcome to Root ✈️");
-// })
+app.get("/",(req,res)=>{
+    res.redirect("/listings");
+})
 app.use(session(sessionOptions));
 
 
