@@ -1,0 +1,140 @@
+<% layout('/layouts/boilerplate.ejs') -%>
+
+<main>
+  <div class="filters">
+    <div class="filter">
+      <div>
+        <a href="/listings/filters/Trending"
+          ><i class="fa-solid fa-fire"></i
+        ></a>
+      </div>
+      <p>Trending</p>
+    </div>
+    <div class="filter">
+      <div>
+        <a href="/listings/filters/Beach"
+          ><i class="fa-solid fa-umbrella-beach"></i
+        ></a>
+      </div>
+      <p>Beach</p>
+    </div>
+    <div class="filter">
+      <div>
+        <a href="/listings/filters/Mountains"
+          ><i class="fa-solid fa-mountain"></i
+        ></a>
+      </div>
+      <p>Mountains</p>
+    </div>
+    <div class="filter">
+      <div>
+        <a href="/listings/filters/Snow"><i class="fa-solid fa-snowman"></i></a>
+      </div>
+      <p>Snow</p>
+    </div>
+    <div class="filter">
+      <div>
+        <a href="/listings/filters/Rooms"><i class="fa-solid fa-bed"></i></a>
+      </div>
+      <p>Rooms</p>
+    </div>
+    <div class="filter">
+      <div>
+        <a href="/listings/filters/Iconic%20cities"
+          ><i class="fa-solid fa-city"></i
+        ></a>
+      </div>
+      <p>Iconic cities</p>
+    </div>
+    <div class="filter">
+      <div>
+        <a href="/listings/filters/Luxury"
+          ><i class="fa-solid fa-martini-glass-citrus"></i
+        ></a>
+      </div>
+      <p>Luxury</p>
+    </div>
+    <div class="filter">
+      <div>
+        <a href="/listings/filters/Amazing%20view"
+          ><i class="fa-solid fa-binoculars"></i
+        ></a>
+      </div>
+      <p>Amazing view</p>
+    </div>
+    <div class="filter">
+      <div>
+        <a href="/listings/filters/Spa"><i class="fa-solid fa-spa"></i></a>
+      </div>
+      <p>Spa</p>
+    </div>
+    <div class="filter">
+      <div>
+        <a href="/listings/filters/Boating"
+          ><i class="fa-solid fa-sailboat"></i
+        ></a>
+      </div>
+      <p>Boating</p>
+    </div>
+    <div class="filter">
+      <div>
+        <a href="/listings/filters/Pools"
+          ><i class="fa-solid fa-person-swimming"></i
+        ></a>
+      </div>
+      <p>Pools</p>
+    </div>
+    <div class="tax-toggle">
+      <div class="form-check-reverse form-switch">
+        <input
+          class="form-check-input"
+          type="checkbox"
+          role="switch"
+          id="switchCheckDefault"
+        />
+        <label class="form-check-label" for="switchCheckDefault"
+          >Include Taxes</label
+        >
+      </div>
+  </div>
+  </div>
+  <%if(typeof selectedCateg !== "undefined"){ %>
+  <h4>Showing category : <%=selectedCateg%></h4>
+  <%}%>
+  <!-- <form action="/listings/new" method="get"><button>Add new listing</button></form> -->
+  <div class="row row-cols-xl-4 row-cols-lg-3 row-cols-md-2 row-cols-sm-1 mt-3">
+    <% for(let listing of listings){%>
+    <a href="/listings/<%=listing._id%>" class="listing-link">
+      <div class="card listing-card" style="width: 20rem">
+        <img
+          src="<%=listing.image.url%>"
+          class="card-img-top"
+          alt="listing image"
+        />
+        <div class="card-img-overlay"></div>
+        <div class="card-body">
+          <p class="card-text">
+            <b><%=listing.title%><br /></b>
+            $<%=listing.price.toLocaleString('en-US')%> / night
+            <span class="tax-info"><i>&nbsp; &nbsp; +18%GST</i></span>
+          </p>
+        </div>
+      </div>
+    </a>
+    <%}%>
+  </div>
+</main>
+
+<script>
+  let taxTogglerBtn = document.querySelector("#switchCheckDefault");
+  taxTogglerBtn.addEventListener("click", () => {
+    let taxInfo = document.querySelectorAll(".tax-info");
+    for (info of taxInfo) {
+      if (info.style.display !== "inline") {
+        info.style.display = "inline";
+      } else {
+        info.style.display = "none";
+      }
+    }
+  });
+</script>

@@ -1,0 +1,294 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+
+/*Body*/
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/*Container*/
+.container {
+  flex: 1 !important;
+}
+
+/*Navbar*/
+.navbar {
+  height: 5rem;
+  background-color: #fff !important;
+  }
+.navbar-nav {
+  background-color: #fff;
+}
+
+/*Icon*/
+.fa-compass {
+  color: #fa424d;
+  font-size: 2rem;
+}
+
+/*Nav options*/
+.nav-link {
+  color: #222 !important;
+}
+
+/*Footer*/
+.f-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.8rem 0;
+  background-color: #ebebeb;
+  
+}
+.f-info-socials i {
+  font-size: 1.5rem;
+}
+.f-info-socials:hover {
+  cursor: pointer;
+}
+.f-info-policies a {
+  text-decoration: none;
+  color: #222;
+  padding: 0 0.4rem;
+}
+.f-info-policies a:hover {
+  text-decoration: underline;
+}
+
+/*Card*/
+
+.listing-card {
+  width: 95%;
+  border: none !important;
+  margin-bottom: 2rem;
+}
+
+.card-img-top {
+  height: 15rem;
+  border-radius: 1rem;
+}
+.card-body {
+  font-family: "Plus Jakarta Sans", sans-serif !important;
+  font-weight: 400;
+  border: none;
+}
+
+.listing-link {
+  text-decoration: none;
+}
+
+.card-img-overlay {
+  opacity: 0;
+}
+.card-img-overlay:hover {
+  opacity: 0.2;
+  background-color: #fff;
+}
+
+
+/*Index page*/
+.filters{
+  display: flex;
+  overflow-x: auto;
+  align-items: center;
+  justify-content: space-around;
+
+}
+.filter{
+  text-align: center;
+  margin: 1rem 2rem;
+  opacity: 0.5;
+}
+.filter p{
+  font-size: 0.8rem;
+}
+
+.filter:hover{
+  opacity: 1;
+  cursor: pointer;
+}
+
+.tax-toggle{
+  margin: 1rem 0rem 0.5rem 0.5rem;
+  height: 3rem;
+  padding-right: 0.4rem;
+  padding-left: 0.1rem;
+  opacity: 0.7;
+  font-size: 0.8rem;
+}
+.tax-toggle:checked{
+  opacity: 1;
+}
+.tax-toggle .form-switch label{
+  text-align: center;
+}
+
+.tax-info{
+  display:none ;
+}
+
+.idxPgsearch-btn{
+  background-color: #fa424d !important;
+  color: #fff !important;
+  border-radius: 1.3rem !important;
+  padding: 0 1rem 0 1rem !important;
+}
+/* .idxPgsearch-btn:hover{
+  background-color: #fa424d;
+  color: #fff;
+  border-radius: 1.3rem;
+  padding: 0 1rem 0 1rem;
+} */
+
+.idxPgsearch-btn i{
+  display: inline;
+  margin-right: 0.5rem;
+}
+
+.search-inp{
+  padding: 0.5rem 3rem !important; 
+  border-radius: 1.3rem !important;
+
+}
+
+
+
+
+/*New form page*/
+.btn-style {
+  background-color: #fa424d !important;
+  border: none !important;
+  color: #fff !important;
+  border: 1px solid #fa424d !important;
+}
+
+.btn-style:hover {
+  border: 1px solid #fa424d !important;
+  color: #222 !important;
+  background-color: #fff !important;
+}
+
+.login-page-bg {
+  transition: background-image 1.5s ease-in-out;
+  background: 
+    /* Top Gradient: Blends with White Navbar */ linear-gradient(
+      to bottom,
+      #ffffff 0%,
+      transparent 10%
+    ),
+    /* Bottom Gradient: Blends with #ebebeb Footer */
+      linear-gradient(to top, #ebebeb 0%, transparent 10%),
+    /* The Background Image */ url("https://images.unsplash.com/photo-1530625797990-6b8c366c4b83?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Keeps the blend stable while scrolling */
+}
+
+/*Show page*/
+
+.show-img {
+  height: 74vh;
+}
+#lt-desc {
+  opacity: 0.7;
+  font-style: italic;
+}
+.card-text p {
+  margin: 2rem 0;
+}
+
+.control-btns {
+  display: flex;
+  justify-content: flex-start;
+}
+.show-btns {
+  display: flex;
+}
+
+.category-listing{
+  padding: 0.2rem 1rem 0.2rem 0.1rem;
+  border-radius: 0.8rem;
+  margin-bottom: 2rem;
+  border:1px solid #fa424d;
+}
+
+/*Map styling*/
+#map {
+  height: 400px;
+  width: 80vh;
+}
+.wanderlust-marker {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+.wanderlust-marker i {
+  font-size: 20px;
+  color: #ff385c;
+}
+.wanderlust-marker .official-logo {
+  display: none;
+}
+/* HOVER EFFECTS */
+.wanderlust-marker:hover {
+  background-color: #ff385c;
+}
+
+/* Switch icons on hover */
+.wanderlust-marker:hover .home-icon {
+  display: none;
+}
+
+.wanderlust-marker:hover .official-logo {
+  display: block;
+  color: white;
+}
+
+/*Reviews*/
+.reviewCards {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 0.3rem;
+}
+
+@media (max-width: 550px) {
+  #map {
+    height: 350px;
+    width: 50vh;
+    margin: auto;
+  }
+}
+
+@media (max-width: 530px) {
+  .card-img-top {
+    height: 10rem;
+  }
+  .listing-card {
+    width: 70%;
+  }
+  #card-holder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .show-img {
+    height: 50vh;
+  }
+  #review-holder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .add-left-padding {
+    padding-left: 2vw;
+  }
+}
